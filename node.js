@@ -1,1 +1,6 @@
-    console.log('hello word');
+let mysql =  require('mysql');
+
+
+let conn = mysql.createConnection({
+
+})
