@@ -3,7 +3,7 @@ let config = {
     user: 'root',
     password: '1234',
     database: 'mysqltest',
-    port: '3000';
+    port: 3000
 };
 
 module.exports = config;

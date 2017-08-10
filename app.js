@@ -1,5 +1,5 @@
 var express = require('express');
-var bodyparser = require('body-parset');
+var bodyparser = require('body-parser');
 var config = require('./config');
 var session = require('express-session');
 var s_router = require('./Router/System/route');
@@ -11,11 +11,11 @@ app.use(bodyparser.urlencoded({
     extended: false
 }));
 
-app.session({
+app.use(session({
     key: 'visualkey',
     secret: 'secrete',
     resave: false
-});
+}));
 
 app.use(bodyparser.json());
 app.use('/', s_router);
